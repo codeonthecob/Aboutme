@@ -1,0 +1,98 @@
+.content-footer,
+.masthead-heading{
+  text-align: center;
+  letter-spacing: 15px;
+  text-shadow: 2px 2px blue;
+}
+.masthead-intro {
+  text-align: left;
+  font: 24px italic bold;
+  text-indent: 50px;
+  
+}
+
+.masthead {
+    padding: 6em 0;
+    background-image: url(https://images.unsplash.com/photo-1431576901776-e539bd916ba2?crop=entropy&fit=crop&fm=jpg&h=1000&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1225);
+    background-color: black;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: solid 1em #FFCF33;
+    cursor:crosshair;
+}
+
+.masthead-intro {
+    margin-bottom: 0.1em;
+}
+
+.masthead-heading {
+    margin-top: -0.2em;
+}
+
+.introduction-section,
+.location-section,
+.questions-section {
+    max-width: 38em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+.social > li {
+    display: inline-block;
+    letter-spacing: 0px;
+    text-shadow: none;
+}
+
+.content-footer > p {
+    color: white;
+    background-color: black;
+    padding: 2em 0;
+    cursor:crosshair;
+    letter-spacing: 0px;
+    text-shadow: none;    
+}
+
+@media only screen and (max-width: 800px) {
+    .masthead {
+        padding: 7em 0;
+    }
+    .masthead-heading {
+        font-size: 3em;
+    }
+
+    .content-footer {
+      padding: 3em;
+      font-size: 
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .masthead {
+        padding: 5em 0;
+    }
+    .masthead-heading {
+        font-size: 5em;
+    }
+    .content-footer {
+      font-size: 1.75em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .masthead {
+        padding: 3em 0;
+    }
+    .masthead-heading {
+        font-size: 7em;
+    }
+    .content-footer {
+      font-size: 1.5em;
+    }
+    .social {
+      font-size: 1em;
+      max-width: 5em;
+      text-align: -webkit-center;
+    }
+}
