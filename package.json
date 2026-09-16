@@ -1,0 +1,18 @@
+{
+  "name": "aether",
+  "version": "1.0.0",
+  "description": "AETHER — a live shared frequency field. Drop whispers into a collective 3D mindscape.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1",
+    "uuid": "^11.1.0"
+  }
+}

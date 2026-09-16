@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#050510" />
+    <meta name="description" content="AETHER — drop into a live shared frequency field. Whisper into the collective mindscape." />
+    <title>AETHER — Shared Frequency</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="stage"></canvas>
+
+      <!-- Join gate -->
+      <div id="gate" class="panel gate">
+        <div class="gate-glow"></div>
+        <p class="eyebrow">live collective · real-time</p>
+        <h1>AETHER</h1>
+        <p class="lede">
+          A shared frequency field. Enter as a glowing soul, drift through space,
+          and leave whispers others can feel.
+        </p>
+        <form id="join-form" autocomplete="off">
+          <label>
+            <span>Your soul name</span>
+            <input id="name-input" maxlength="18" placeholder="e.g. luna, echo, void…" required />
+          </label>
+          <label>
+            <span>Aura hue <em id="hue-val">210°</em></span>
+            <input id="hue-input" type="range" min="0" max="359" value="210" />
+          </label>
+          <div class="aura-preview" id="aura-preview"></div>
+          <button type="submit" class="btn primary">Enter the field</button>
+        </form>
+        <p class="hint">No accounts. No feed. Just presence.</p>
+      </div>
+
+      <!-- HUD -->
+      <header id="hud" class="hud hidden" aria-live="polite">
+        <div class="brand">
+          <span class="dot"></span>
+          <strong>AETHER</strong>
+          <span class="chip" id="stat-souls">0 souls</span>
+          <span class="chip ghost" id="stat-whispers">0 whispers</span>
+        </div>
+        <div class="you" id="you-chip"></div>
+      </header>
+
+      <aside id="souls-panel" class="panel souls-panel hidden">
+        <h2>Present</h2>
+        <ul id="souls-list"></ul>
+      </aside>
+
+      <div id="toast" class="toast hidden" role="status"></div>
+
+      <div id="whisper-feed" class="whisper-feed hidden" aria-live="polite"></div>
+
+      <footer id="composer" class="composer hidden">
+        <form id="whisper-form" autocomplete="off">
+          <input
+            id="whisper-input"
+            maxlength="140"
+            placeholder="Whisper into the aether… (Enter to cast)"
+            aria-label="Whisper text"
+          />
+          <button type="submit" class="btn cast" title="Cast whisper">✦</button>
+          <button type="button" id="pulse-btn" class="btn ghost" title="Send a pulse">◎</button>
+        </form>
+        <p class="composer-hint">Click a floating whisper to resonate · drag to look around · scroll to zoom</p>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
